@@ -56,15 +56,20 @@ public class Extensions extends JavaExtensions {
 
     public static String formatDefault(String data) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy  hh:mm:ss");
-        return simpleDateFormat.format(data); 
+        return simpleDateFormat.format(data);
     }
-    
-    public static String toMD5(String data) throws NoSuchAlgorithmException{         
-        MessageDigest md = MessageDigest.getInstance("MD5");
- 
-        BigInteger hash = new BigInteger(1, md.digest(data.getBytes()));
- 
-        return String.format("%32x", hash);    
+
+    public static String toMD5(String data) throws NoSuchAlgorithmException {
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+
+            BigInteger hash = new BigInteger(1, md.digest(data.getBytes()));
+
+            return String.format("%32x", hash);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }
