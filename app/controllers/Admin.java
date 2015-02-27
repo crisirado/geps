@@ -1,22 +1,23 @@
 package controllers;
  
+import models.login.Usuario;
 import play.mvc.*;
  
  
  
 @With(Secure.class)
-public class Admin extends Controller {
+@CRUD.For(Usuario.class)
+public class Admin extends CRUD {
     
     @Before
     static void setConnectedUser() {
         if(Security.isConnected()) {
             //User user = User.find("byEmail", Security.connected()).first();
-            renderArgs.put("user", "Cristiano Blans");
+            Usuario usuario = Usuario.find("byEmail","admin@suaempresa.com").first();
+            
+            renderArgs.put("user", usuario != null ?usuario.nome: "");
         }
     }
- 
-    public static void index() {
-        render();
-    }
+    
     
 }
