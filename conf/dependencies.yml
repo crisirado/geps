@@ -2,5 +2,6 @@
 
 require:
     - play
+    - play -> crud
     - play -> secure
 
