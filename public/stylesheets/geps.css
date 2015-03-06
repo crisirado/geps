@@ -1,0 +1,79 @@
+.logo{
+    padding: 0 !important;
+    /*margin-left: 5px !important;*/
+    margin-top: 3px;
+}
+
+.logo img{
+    height: 44px;
+    width: 70px;
+}
+
+.float-menu{
+    position: fixed;
+}
+
+.float-menu a{ 
+    display: block;
+}
+
+.menu-geps{   
+    color: #FFFFFF !important;   
+    background-image: linear-gradient(to bottom, #1C9ABE 0px, #12295A 100%) !important;      
+}
+
+.menu-geps .navbar-nav li a {
+    color: #FFFFFF !important;   
+}
+
+.menu-geps .navbar-nav li a:focus {
+    color: #FFFFFF !important;
+    background-image: linear-gradient(to bottom, #1C9ABE 0px, #12295A 100%) !important;
+}
+
+.menu-geps .dropdown-menu li a {
+    color: #005432 !important;
+    background-image: linear-gradient(to bottom, #FFF 0px, #FFF 100%) !important;
+}
+
+.menu-geps .dropdown-menu li a:hover {
+    color: #00000 !important;  
+    background-image: linear-gradient(to bottom, #FFD028 0px, #FFD028 100%) !important;  
+}
+
+.menu-geps .navbar-toggle{
+    background-color: none !important;
+    border-color: #FFFFFF !important;
+}
+
+.menu-geps .navbar-toggle .icon-bar {
+    background-color: #FFFFFF !important;
+}
+
+.menu-geps .dropdown-menu .divider { 
+    height: 0;
+    margin: 1px;    
+}
+
+.topo {
+    width: 100% !important;
+    margin-top: 0;
+    top: 0;
+    position: relative !important;
+    background-image: linear-gradient(to bottom, #1C9ABE 0px, #12295A 100%) !important;  
+    color: #FFFFFF !important;
+    font-size: 20px;
+}
+
+.rodape {
+    width: 100%;
+    margin-bottom: 0;
+    bottom: 0;
+    position: fixed !important;
+    color: #FFFFFF !important;
+    background-image: linear-gradient(to bottom, #1C9ABE 0px, #12295A 100%) !important;     
+}
+
+.sair{
+    margin-right: 5px !important;
+}
