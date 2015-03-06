@@ -1,8 +1,20 @@
 #Login
-secure.title=Gestão de Projetos em Scrum
-secure.username=Usuário:
-secure.password=Senha:
+#secure.title=Gestão de Projetos em Scrum
+secure.username=Usuário
+secure.username.tip=E-mail
+secure.password=Senha
+secure.password.tip='Digite sua senha'
 secure.remember=Lembre-me
 secure.signin=Entrar
 secure.logout=Você foi deslogado.
 secure.main= Meu sistema
+secure.error=Ops! Erro no usuário e/ou senha
+general.title='GEPS'
+
+
+#CRUD
+#Usuário
+nome= Nome
+email= E-mail
+password = Senha
+crud.title = Administração
