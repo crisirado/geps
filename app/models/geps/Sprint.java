@@ -3,20 +3,23 @@ package models.geps;
 import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import play.db.jpa.Model;
 
 @Entity
 @Table(schema = "GEPS", name = "SPRINTS")
-public class Sprint {
+public class Sprint extends Model{
     @Temporal(TemporalType.TIMESTAMP)
-    Date inicio;
+    public Date inicio;
     
     @Temporal(TemporalType.TIMESTAMP)
-    Date fim;
+    public Date fim;
     
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "projetos")
-    Projeto projeto;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "PROJETO_ID")
+    public Projeto projeto;
 }

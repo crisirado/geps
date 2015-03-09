@@ -8,7 +8,7 @@ import play.db.jpa.Model;
 @Table(schema = "GEPS", name = "SITUACOES")
 public class Situacao extends Model {
 
-    String sigla;
+    public String sigla;
 
-    String descricao;
+    public String descricao;
 }

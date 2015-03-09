@@ -4,7 +4,6 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import models.login.Usuario;
 import play.db.jpa.Model;
@@ -14,11 +13,11 @@ import play.db.jpa.Model;
 public class TarefaSituacao extends Model{
     
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    Tarefa tarefa;
+    public Tarefa tarefa;
     
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    Situacao situacao;
+    public Situacao situacao;
     
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    Usuario usuario;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    public Usuario usuario;
 }

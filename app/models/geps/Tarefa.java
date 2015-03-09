@@ -16,8 +16,8 @@ import play.db.jpa.Model;
 public class Tarefa extends Model{
     String descricao;
     @Temporal(TemporalType.TIMESTAMP)
-    Date criacao;
+    public Date criacao;
     
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    Usuario usuario;
+    public Usuario usuario;
 }

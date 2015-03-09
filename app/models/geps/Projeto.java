@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -14,14 +14,14 @@ import play.db.jpa.Model;
 @Table(schema = "GEPS", name = "PROJETOS")
 public class Projeto extends Model {
 
-    String nome;
+    public String nome;
     
     @Temporal(TemporalType.TIMESTAMP)
-    Date inicio;
+    public Date inicio;
 
     @Temporal(TemporalType.TIMESTAMP)
-    Date fim;
+    public Date fim;
     
-    @ManyToOne(cascade = CascadeType.ALL)
-    List<Sprint> sprints;
+    @OneToMany(cascade = CascadeType.ALL)
+    public List<Sprint> sprints;
 }
