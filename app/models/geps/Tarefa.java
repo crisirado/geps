@@ -1,27 +1,23 @@
 package models.geps;
 
 import java.util.Date;
-import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import models.login.Usuario;
 import play.db.jpa.Model;
 
 @Entity
-@Table(schema = "GEPS", name = "PROJETOS")
-public class Projeto extends Model {
-
-    String nome;
-    
+@Table(schema = "GEPS", name = "TAREFAS")
+public class Tarefa extends Model{
+    String descricao;
     @Temporal(TemporalType.TIMESTAMP)
-    Date inicio;
-
-    @Temporal(TemporalType.TIMESTAMP)
-    Date fim;
+    Date criacao;
     
-    @ManyToOne(cascade = CascadeType.ALL)
-    List<Sprint> sprints;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    Usuario usuario;
 }
