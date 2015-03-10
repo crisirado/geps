@@ -21,3 +21,5 @@ GET     /admin/?                                        Admin.index
 # Projetos
 GET     /projetos                                       Projetos.index
 
+#Usuários
+GET     /usuarios                                       Usuarios.index
