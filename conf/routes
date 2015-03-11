@@ -1,5 +1,5 @@
 # Home page
-GET     /                                       Application.index
+GET     /                                             Application.index
 
 # Ignore favicon requests
 GET     /favicon.ico                                    404
@@ -23,3 +23,4 @@ GET     /projetos                                       Projetos.index
 
 #Usuários
 GET     /usuarios                                       Usuarios.index
+GET     /usuarios/detalhes/                             Usuarios.visualizar
