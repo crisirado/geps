@@ -1,3 +1,29 @@
 #{extends 'template.html' /}
 #{set title:'[GEPS] - Usuários' /}
+#{include '/Usuarios/modalUsuario.html' /}
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Usuários</h3>
+    </div>
+
+</div>
+
+<table id="tabela-usuario" class="table table-striped table-bordered table-hover table-link">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>E-Mail</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        #{list usuarios,as: 'usuario'}
+        <tr data-id="${usuario?.id}">
+            <td>${usuario?.nome}</td>
+            <td>${usuario?.email}</td>
+        </tr>
+        #{/list}
+    </tbody>
+</table>
 
