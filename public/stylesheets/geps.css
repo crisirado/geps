@@ -1,3 +1,5 @@
+/******************LOGO********************************************************/
+
 .logo{
     padding: 0 !important;    
     margin-top: 3px;
@@ -8,6 +10,7 @@
     width: 70px;
 }
 
+/******************MENU********************************************************/
 .float-menu{
     position: fixed;
 }
@@ -54,16 +57,21 @@
     margin: 1px;    
 }
 
+/******************TOPO********************************************************/
 .topo {
     width: 100% !important;
-    margin-top: 0;
-    top: 0;
     position: relative !important;
     background-image: linear-gradient(to bottom, #1C9ABE 0px, #12295A 100%) !important;  
     color: #FFFFFF !important;
     font-size: 20px;
+    
 }
-
+/******************CONTEUDO****************************************************/
+.conteudo{
+    margin-top: 60px;
+    position: relative;
+}
+/******************RODAPE******************************************************/
 .rodape {
     width: 100%;
     margin-bottom: 0;
@@ -73,6 +81,26 @@
     background-image: linear-gradient(to bottom, #1C9ABE 0px, #12295A 100%) !important;     
 }
 
+/******************LOGOUT******************************************************/
 .sair{
     margin-right: 5px !important;
+}
+
+/******************TABELAS LINKS***********************************************/
+.table-link{
+    text-decoration: none;
+}
+
+.table-link tbody tr{
+    cursor: pointer;    
+}
+
+.table-link tbody tr:hover{
+    cursor: pointer;    
+    color: blue;
+}
+
+/******************MODAL*******************************************************/
+.modal-geps{
+    width: 75% !important;
 }
